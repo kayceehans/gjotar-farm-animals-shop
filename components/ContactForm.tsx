@@ -42,7 +42,7 @@ export default function ContactForm() {
       <h2 className="section-title">Get In Touch</h2>
       <div className="contact-grid">
         <div className="contact-info">
-          <h3>📍 Green Acres Farm</h3>
+          <h3>📍 G-Jotar Acres Farm</h3>
           <div className="contact-detail">
             <strong>📞 Phone</strong>
             <p>Stephen Ayeni</p>

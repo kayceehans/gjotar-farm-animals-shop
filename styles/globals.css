@@ -189,7 +189,7 @@ body {
 }
 
 .buy-btn {
-  width: 100%;
+  width: 50%;
   background: linear-gradient(135deg, #ff6b35, #ff8c42);
   color: white;
   border: none;
@@ -197,6 +197,19 @@ body {
   border-radius: 30px;
   font-size: 1rem;
   font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.whatsapp-btn {
+  width: 50%;
+  background: linear-gradient(135deg, #4d35ff, #ff8c42);
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 20px;
+  font-size: 1rem;
+  font-weight: 300;
   cursor: pointer;
   transition: transform 0.2s;
 }
