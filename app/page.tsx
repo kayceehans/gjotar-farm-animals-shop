@@ -1,65 +1,122 @@
-import Image from "next/image";
+import Header from '../components/Header';
+import Hero from '../components/Hero';
+import ProductCard from '../components/ProductCard';
+import ContactForm from '../components/ContactForm';
+import OwnerSection from '../components/OwnerSection';
+import Footer from '../components/Footer';
 
 export default function Home() {
+  const animals = [
+    {
+      id: 1,
+      name: 'Large White Pig',
+      category: '🐷 Pig',
+      price: 85000,
+      location: 'Ogun State',
+      age: '4 months',
+      vaccinated: 'Yes (Full course)',
+      healthStatus: 'Excellent, dewormed',
+      image: '/LandRace.jpeg'
+    },
+    {
+      id: 2,
+      name: 'Droc breed Pig',
+      category: '🐷 Pig',
+      price: 85000,
+      location: 'Ogun State',
+      age: '4 months',
+      vaccinated: 'Yes (Full course)',
+      healthStatus: 'Excellent, dewormed',
+      image: '/duroc.jpeg'
+    },
+    {
+      id: 3,
+      name: 'Large White breed Pig',
+      category: '🐷 Pig',
+      price: 85000,
+      location: 'Ogun State',
+      age: '4 months',
+      vaccinated: 'Yes (Full course)',
+      healthStatus: 'Excellent, dewormed',
+      image: '/largewhite.jpeg'
+    },
+    {
+      id: 4,
+      name: 'Red Sokoto Goat (Buck)',
+      category: '🐐 Goat',
+      price: 65000,
+      location: 'Sokoto State',
+      age: '6 months',
+      vaccinated: 'Yes',
+      healthStatus: 'Healthy, ready for breeding',
+      image: 'https://images.unsplash.com/photo-1524024973431-2ad916746881?w=500'
+    },
+    {
+      id: 5,
+      name: 'West African Dwarf Goat',
+      category: '🐐 Goat',
+      price: 55000,
+      location: 'Lagos',
+      age: '5 months',
+      vaccinated: 'Yes',
+      healthStatus: 'Disease-resistant breed',
+      image: 'https://images.unsplash.com/photo-1534337621606-e3df5ee0b422?w=500'
+    },
+    {
+      id: 6,
+      name: 'Broiler Chickens (100 pcs)',
+      category: '🐔 Poultry',
+      price: 125000,
+      location: 'Oyo State',
+      age: '6 weeks',
+      vaccinated: 'Marek’s, Gumboro',
+      healthStatus: 'Fast-growing, high yield',
+      image: 'https://images.unsplash.com/photo-1548550023-2bdb3c5beed7?w=500'
+    },
+    {
+      id: 7,
+      name: 'Layers (Point of Lay)',
+      category: '🥚 Poultry',
+      price: 3500,
+      location: 'Ogun State',
+      age: '18 weeks',
+      vaccinated: 'Complete',
+      healthStatus: 'Ready to lay, high production',
+      image: 'https://images.unsplash.com/photo-1569529467454-2d4d9f9d9f9d?w=500'
+    },
+    {
+      id: 8,
+      name: 'Duroc Pig (Breeding Boar)',
+      category: '🐷 Pig',
+      price: 120000,
+      location: 'Kaduna State',
+      age: '8 months',
+      vaccinated: 'Yes',
+      healthStatus: 'Top genetics, fast growth',
+      image: 'https://images.unsplash.com/photo-1585155906416-b08e5c5e7d8b?w=500'
+    }
+  ];
+
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <>
+      <Header />
+      <Hero />
+      
+      <div className="container" id="products">
+        <h2 className="section-title">🐖 Our Premium Livestock 🐐</h2>
+        <div className="products-grid">
+          {animals.map(animal => (
+            <ProductCard key={animal.id} animal={animal} />
+          ))}
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
+      </div>
+
+      <div className="container">
+        <ContactForm />
+        <OwnerSection />
+      </div>
+
+      <Footer />
+    </>
   );
 }
