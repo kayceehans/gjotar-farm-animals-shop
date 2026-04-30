@@ -55,8 +55,8 @@ export default function ContactForm() {
           </div>
           <div className="contact-detail">
             <strong>🏠 Address</strong>
-            <p>Km 15, Lagos-Ibadan Expressway,</p>
-            <p>Mowe, Ogun State, Nigeria</p>
+            <p>Jaka village , Omi adio Ibadan Oyo state Nigeriia,</p>           
+            <p>Ibadan, Oyo State, Nigeria</p>
           </div>
           <div className="contact-detail">
             <strong>🕒 Visiting Hours</strong>

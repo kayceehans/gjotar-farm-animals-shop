@@ -60,7 +60,7 @@ export default function Home() {
       age: '5 months',
       vaccinated: 'Yes',
       healthStatus: 'Disease-resistant breed',
-      image: 'https://images.unsplash.com/photo-1534337621606-e3df5ee0b422?w=500'
+      image: '/goat.jpeg'
     },
     {
       id: 6,
@@ -72,29 +72,29 @@ export default function Home() {
       vaccinated: 'Marek’s, Gumboro',
       healthStatus: 'Fast-growing, high yield',
       image: 'https://images.unsplash.com/photo-1548550023-2bdb3c5beed7?w=500'
-    },
-    {
-      id: 7,
-      name: 'Layers (Point of Lay)',
-      category: '🥚 Poultry',
-      price: 3500,
-      location: 'Ogun State',
-      age: '18 weeks',
-      vaccinated: 'Complete',
-      healthStatus: 'Ready to lay, high production',
-      image: 'https://images.unsplash.com/photo-1569529467454-2d4d9f9d9f9d?w=500'
-    },
-    {
-      id: 8,
-      name: 'Duroc Pig (Breeding Boar)',
-      category: '🐷 Pig',
-      price: 120000,
-      location: 'Kaduna State',
-      age: '8 months',
-      vaccinated: 'Yes',
-      healthStatus: 'Top genetics, fast growth',
-      image: 'https://images.unsplash.com/photo-1585155906416-b08e5c5e7d8b?w=500'
-    }
+    }//,
+    // {
+    //   id: 7,
+    //   name: 'Layers (Point of Lay)',
+    //   category: '🥚 Poultry',
+    //   price: 3500,
+    //   location: 'Ogun State',
+    //   age: '18 weeks',
+    //   vaccinated: 'Complete',
+    //   healthStatus: 'Ready to lay, high production',
+    //   image: 'https://images.unsplash.com/photo-1569529467454-2d4d9f9d9f9d?w=500'
+    // },
+    // {
+    //   id: 8,
+    //   name: 'Duroc Pig (Breeding Boar)',
+    //   category: '🐷 Pig',
+    //   price: 120000,
+    //   location: 'Kaduna State',
+    //   age: '8 months',
+    //   vaccinated: 'Yes',
+    //   healthStatus: 'Top genetics, fast growth',
+    //   image: 'https://images.unsplash.com/photo-1585155906416-b08e5c5e7d8b?w=500'
+    // }
   ];
 
   return (
